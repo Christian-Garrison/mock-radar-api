@@ -18,8 +18,9 @@ It uses [json-server](https://github.com/typicode/json-server) and [faker.js](ht
 
 ## Usage
 
-1. Start the JSON server: `yarn start`
-2. The server will be running on `http://localhost:3001`
+1. Generate the fake data: `yarn generate`
+2. Start the JSON server: `yarn start`
+3. The server will be running on `http://localhost:3001`
 
 ## Contributing
 
