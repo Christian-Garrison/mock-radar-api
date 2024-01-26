@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import emojiFlags from 'emoji-flags';
-import { writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 
 const createRandomAddress = () => {
   const latitude = faker.location.latitude();
@@ -61,4 +61,9 @@ const response = {
   autocomplete: addresses,
 };
 
-writeFileSync('db.json', JSON.stringify(response));
+const dir = './build';
+if (!existsSync(dir)) {
+  mkdirSync(dir);
+}
+
+writeFileSync(`${dir}/db.json`, JSON.stringify(response));

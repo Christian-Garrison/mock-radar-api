@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import jsonServer from 'json-server';
 const server = jsonServer.create();
-const router = jsonServer.router('db.json');
+const router = jsonServer.router('build/db.json');
 const middlewares = jsonServer.defaults();
 
 // Set default middlewares (logger, static, cors and no-cache)

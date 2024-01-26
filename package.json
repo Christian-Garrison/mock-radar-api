@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate": "node generate.js && prettier --write db.json",
+    "generate": "node generate.js && prettier --write build/db.json",
     "start": "node server.js"
   },
   "dependencies": {
